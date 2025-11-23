@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube to Spotify",
+  "version": "1.0",
+  "description": "Add songs from YouTube to your Spotify playlists.",
+  "permissions": [
+    "identity",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.spotify.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "LOGO.png"
+  },
+  "icons": {
+    "16": "LOGO.png",
+    "48": "LOGO.png",
+    "128": "LOGO.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "src/content_script.js"
+      ]
+    }
+  ]
+}

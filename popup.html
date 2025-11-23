@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube to Spotify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="LOGO.png" alt="Logo" class="logo">
+            <h1>YouTube to Spotify</h1>
+        </header>
+
+        <div id="login-section">
+            <button id="login-btn" class="btn primary">Login with Spotify</button>
+        </div>
+
+        <div id="main-section" class="hidden">
+            <div class="input-group">
+                <input type="text" id="song-input" placeholder="Enter song name or YouTube link">
+                <button id="get-current-tab-btn" class="btn secondary" title="Get from current tab">
+                    Detect from Tab
+                </button>
+            </div>
+
+            <div class="input-group">
+                <label for="playlist-select">Select Playlist:</label>
+                <select id="playlist-select">
+                    <option value="" disabled selected>Loading playlists...</option>
+                </select>
+            </div>
+
+            <button id="add-btn" class="btn primary">Add to Playlist</button>
+
+            <div id="status-message" class="status"></div>
+        </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>
